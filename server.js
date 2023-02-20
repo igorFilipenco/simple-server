@@ -1,7 +1,9 @@
 import express from 'express'
+import cors from 'cors'
 import {TO_DOS} from "./mock/todo-mock.js";
 const app = express();
 
+app.use(cors());
 
 app.get('/to_dos', (req, res) => {
     res.json(TO_DOS);
